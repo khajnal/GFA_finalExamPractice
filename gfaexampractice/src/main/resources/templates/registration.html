@@ -5,13 +5,13 @@
   <title>Registration</title>
 </head>
 <body>
-<h1>Welcome! Please Log in, to use the Todo Application!</h1>
-<form action="/user/save" th:object="${user}">
+<h1>Get a wonderful account to use the wonderful applation!</h1>
+<form action="/registration" th:object="${user}">
   <label for="username">Username</label>
   <input type="text" id=username th:field="*{name}" placeholder="Username" , required/><br>
   <label for="password">Password</label>
   <input type="password" id="password" th:field="*{password}" placeholder="Password" , required/>
-  <input type="submit" value="Log in">
+  <input type="submit" value="Register">
 </form>
 </body>
 </html>
