@@ -13,7 +13,6 @@ import javax.persistence.Id;
 import javax.validation.constraints.Size;
 
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -26,4 +25,9 @@ public class User {
   private String name;
   @Size(min = 8, max = 18)
   private String password;
+
+  public User(@Size(min = 5, max = 20) String name, @Size(min = 8, max = 18) String password) {
+    this.name = name;
+    this.password = password;
+  }
 }

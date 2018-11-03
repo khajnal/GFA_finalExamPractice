@@ -12,7 +12,6 @@ import javax.validation.constraints.Size;
 import java.util.Date;
 
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -28,4 +27,10 @@ public class Todo {
   private String description;
   @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date createdAt;
+
+  public Todo(@Size(max = 30) @NotNull String name, String description, Date createdAt) {
+    this.name = name;
+    this.description = description;
+    this.createdAt = createdAt;
+  }
 }
